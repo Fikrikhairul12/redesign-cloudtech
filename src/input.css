@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #82181a;
+    --color-secondary: #64748b;
+    --color-dark: #0f172a;
+}
+
+/* Custom styles for navbar */
+.navbar-fixed {
+    @apply fixed z-[9999] bg-white opacity-80;
+}
+
+/* Blur effect for navbar when scrolled */
+.navbar-blur {
+    @apply bg-white/90 backdrop-blur-md shadow-lg;
+}
+
+/* Hamburger line styles */
+.hamburger-line {
+    @apply w-full h-[2px] bg-dark rounded-full transition-all duration-300 ease-in-out;
+}
+
+.hamburger-active .hamburger-line:nth-child(1) {
+    @apply rotate-45 translate-y-[12px];
+}
+
+.hamburger-active .hamburger-line:nth-child(2) {
+    @apply opacity-0 scale-0;
+}
+
+.hamburger-active .hamburger-line:nth-child(3) {
+    @apply -rotate-45 -translate-y-[6px];
+}
+
+/* Ensure proper container alignment */
+.container {
+    @apply max-w-7xl mx-auto;
+}
+
+/* Ensure header has transition */
+header {
+    @apply transition-all duration-300 ease-in-out;
+}
